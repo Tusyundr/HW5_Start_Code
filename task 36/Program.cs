@@ -26,12 +26,16 @@ array = ArrayGenerator(arraylenght, arraymax, arraymin);
 
 int[] ArrayGenerator(int lenght, int max, int min) 
 {
+     Console.Write("Создан массив, заполненный случайными числами: [");
     int[] array = new int[lenght];
-    for (int i = 0; i < lenght; i++)
+       for (int i = 0; i < lenght; i++)
     {
         array[i] = new Random().Next(min, max + 1);
-        Console.Write(array[i] + "; ");
+        {
+            if(i < lenght - 1) Console.Write($"{array[i]}, ");
+            else Console.Write($"{array[i]}");
+        } 
     }
-    Console.WriteLine();
+    Console.WriteLine("]");
     return array;
     }
