@@ -29,7 +29,7 @@ int[] ArrayGenerator(int lenght, int max, int min)
     int[] array = new int[lenght];
     for (int i = 0; i < lenght; i++)
     {
-        array[i] = new Random().Next(min, max);
+        array[i] = new Random().Next(min, max + 1);
         Console.Write(array[i] + "; ");
     }
     Console.WriteLine();
